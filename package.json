@@ -209,10 +209,8 @@
   ],
   "scripts": {
     "lint": "standard-markdown README.md && standard",
-    "postinstall": "node ./scripts/download.js",
     "release": "bumped release",
-    "test": "vows ./test/*.js --spec",
-    "update": "node ./scripts/download.js"
+    "test": "vows ./test/*.js --spec"
   },
   "license": "MIT",
   "commitlint": {
