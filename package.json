@@ -1,14 +1,18 @@
 {
-  "name": "youtube-dl",
-  "description": "youtube-dl driver for node",
-  "homepage": "https://github.com/przemyslawpluta/node-youtube-dl#readme",
-  "version": "3.0.2",
+  "name": "@distube/youtube-dl",
+  "description": "youtube-dl driver for node, customized for DisTube.js.org.",
+  "homepage": "https://distube.js.org",
+  "version": "0.0.2",
   "main": "./lib/youtube-dl.js",
   "author": {
-    "name": "Roly Fentanes",
-    "url": "https://github.com/fent"
+    "name": "Skick",
+    "url": "https://github.com/skick1234"
   },
   "contributors": [
+    {
+      "name": "Roly Fentanes",
+      "url": "https://github.com/fent"
+    },
     {
       "name": "Roly Fentanes",
       "email": "roly426@gmail.com"
@@ -168,10 +172,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/przemyslawpluta/node-youtube-dl.git"
+    "url": "git://github.com/skick1234/node-youtube-dl.git"
   },
   "bugs": {
-    "url": "https://github.com/przemyslawpluta/node-youtube-dl/issues"
+    "url": "https://github.com/skick1234/node-youtube-dl/issues"
   },
   "keywords": [
     "download",
@@ -179,13 +183,13 @@
     "youtube"
   ],
   "dependencies": {
-    "debug": "~4.1.1",
-    "execa": "~3.2.0",
+    "debug": "~4.2.0",
+    "execa": "~4.1.0",
     "hh-mm-ss": "~1.2.0",
-    "mkdirp": "~0.5.1",
+    "mkdirp": "~1.0.4",
     "request": "~2.88.0",
-    "streamify": "~0.2.9",
-    "universalify": "~0.1.2"
+    "streamify": "~1.0.0",
+    "universalify": "~2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
@@ -204,8 +208,7 @@
     "node": ">= 10"
   },
   "files": [
-    "lib",
-    "scripts"
+    "lib"
   ],
   "scripts": {
     "lint": "standard-markdown README.md && standard",
@@ -220,8 +223,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npx lint-staged"
     }
   },
   "lint-staged": {
