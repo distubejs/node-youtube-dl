@@ -1,0 +1,13 @@
+example/
+test/
+*.mp4
+*.webm
+*.srt
+*.mp3
+*.m4a
+*.swp
+.DS_Store
+node_modules
+package-lock.json
+.editorconfig
+.bumpedrc

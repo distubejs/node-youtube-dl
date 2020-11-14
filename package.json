@@ -2,7 +2,7 @@
   "name": "@distube/youtube-dl",
   "description": "youtube-dl driver for node, customized for DisTube.js.org.",
   "homepage": "https://distube.js.org",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "./lib/youtube-dl.js",
   "author": {
     "name": "Skick",
