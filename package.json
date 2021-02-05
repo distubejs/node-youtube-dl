@@ -2,7 +2,7 @@
   "name": "@distube/youtube-dl",
   "description": "youtube-dl driver for node, customized for DisTube.js.org.",
   "homepage": "https://distube.js.org",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./lib/youtube-dl.js",
   "author": {
     "name": "Skick",
@@ -42,6 +42,10 @@
       "email": "jaime.marquinez.ferrandiz@gmail.com"
     },
     {
+      "name": "Bruno",
+      "email": "brunobg@gmail.com"
+    },
+    {
       "name": "Jay Baker",
       "email": "logikal@gmail.com"
     },
@@ -50,28 +54,28 @@
       "email": "dsmoosh@Davids-MacBook-Pro.local"
     },
     {
-      "name": "Jack Li",
-      "email": "jack.lee2980@gmail.com"
-    },
-    {
       "name": "Frederic Germain",
       "email": "frederic.germain@gmail.com"
+    },
+    {
+      "name": "Jack Li",
+      "email": "jack.lee2980@gmail.com"
     },
     {
       "name": "Calvin",
       "email": "calvin@sealtelecom.com.br"
     },
     {
-      "name": "Sergey M․",
-      "email": "dstftw@gmail.com"
+      "name": "EragonJ",
+      "email": "eragonj@eragonj.me"
     },
     {
       "name": "Jeremy Louie",
       "email": "jeremy@jeremylouie.com"
     },
     {
-      "name": "EragonJ",
-      "email": "eragonj@eragonj.me"
+      "name": "Sergey M․",
+      "email": "dstftw@gmail.com"
     },
     {
       "name": "optikfluffel",
@@ -86,48 +90,8 @@
       "email": "hhardel@gmail.com"
     },
     {
-      "name": "coderaiser",
-      "email": "mnemonic.enemy@gmail.com"
-    },
-    {
-      "name": "liuye.adam",
-      "email": "liuye.adam@bytedance.com"
-    },
-    {
-      "name": "walheresq",
-      "email": "walheresq@hotmail.com"
-    },
-    {
-      "name": "Alireza Mirian",
-      "email": "alireza.mirian@gmail.com"
-    },
-    {
-      "name": "▟ ▖▟ ▖",
-      "email": "dodo.the.last@gmail.com"
-    },
-    {
-      "name": "AndriiHryhorovskyi",
-      "email": "private_ukr_pochta@ukr.net"
-    },
-    {
-      "name": "Davide Pastore",
-      "email": "pasdavide@gmail.com"
-    },
-    {
       "name": "Farrin Reid",
       "email": "blakmatrix@gmail.com"
-    },
-    {
-      "name": "Jason Penny",
-      "email": "jason@jooraccess.com"
-    },
-    {
-      "name": "Juan C. Olivares",
-      "email": "cristobal@cxsoftware.com"
-    },
-    {
-      "name": "Lopez Hugo",
-      "email": "hugo.lpz@gmail.com"
     },
     {
       "name": "Meral",
@@ -142,6 +106,10 @@
       "email": "ngotchac@gmail.com"
     },
     {
+      "name": "Nikolay Lapshin",
+      "email": "nlapshin1989@gmail.com"
+    },
+    {
       "name": "Panayiotis",
       "email": "panayiotis.eracleous@gmail.com"
     },
@@ -154,8 +122,20 @@
       "email": "pietro.passarelli@gmail.com"
     },
     {
+      "name": "DiegoFleitas",
+      "email": "diego.fleitas68@gmail.com"
+    },
+    {
+      "name": "Davide Pastore",
+      "email": "pasdavide@gmail.com"
+    },
+    {
       "name": "Rafael Kraut",
       "email": "rk@vi-arise.com"
+    },
+    {
+      "name": "Alireza Mirian",
+      "email": "alireza.mirian@gmail.com"
     },
     {
       "name": "Sagi Nadir",
@@ -168,6 +148,38 @@
     {
       "name": "btmdave",
       "email": "dave@bluetopmedia.com"
+    },
+    {
+      "name": "coderaiser",
+      "email": "mnemonic.enemy@gmail.com"
+    },
+    {
+      "name": "liuye.adam",
+      "email": "liuye.adam@bytedance.com"
+    },
+    {
+      "name": "▟ ▖▟ ▖",
+      "email": "dodo.the.last@gmail.com"
+    },
+    {
+      "name": "AndriiHryhorovskyi",
+      "email": "private_ukr_pochta@ukr.net"
+    },
+    {
+      "name": "Jason Penny",
+      "email": "jason@jooraccess.com"
+    },
+    {
+      "name": "walheresq",
+      "email": "walheresq@hotmail.com"
+    },
+    {
+      "name": "Juan C. Olivares",
+      "email": "cristobal@cxsoftware.com"
+    },
+    {
+      "name": "Lopez Hugo",
+      "email": "hugo.lpz@gmail.com"
     }
   ],
   "repository": {
@@ -183,12 +195,12 @@
     "youtube"
   ],
   "dependencies": {
-    "debug": "~4.2.0",
-    "execa": "~4.1.0",
+    "debug": "~4.3.1",
+    "execa": "~5.0.0",
     "hh-mm-ss": "~1.2.0",
     "mkdirp": "~1.0.4",
     "request": "~2.88.0",
-    "streamify": "~1.0.0",
+    "streamify": "~0.2.9",
     "universalify": "~2.0.0"
   },
   "devDependencies": {
@@ -208,12 +220,15 @@
     "node": ">= 10"
   },
   "files": [
-    "lib"
+    "lib",
+    "scripts"
   ],
   "scripts": {
     "lint": "standard-markdown README.md && standard",
+    "postinstall": "node ./scripts/download.js",
     "release": "bumped release",
-    "test": "vows ./test/*.js --spec"
+    "test": "vows ./test/*.js --spec",
+    "update": "node ./scripts/download.js"
   },
   "license": "MIT",
   "commitlint": {
@@ -229,16 +244,13 @@
   },
   "lint-staged": {
     "package.json": [
-      "finepack",
-      "git add"
+      "finepack"
     ],
     "*.js": [
-      "prettier-standard",
-      "git add"
+      "prettier-standard"
     ],
     "*.md": [
-      "standard-markdown",
-      "git add"
+      "standard-markdown"
     ]
   }
 }
