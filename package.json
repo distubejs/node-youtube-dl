@@ -2,7 +2,7 @@
   "name": "@distube/youtube-dl",
   "description": "youtube-dl driver for node, customized for DisTube.js.org.",
   "homepage": "https://distube.js.org",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./lib/youtube-dl.js",
   "author": {
     "name": "Skick",
@@ -195,12 +195,11 @@
     "youtube"
   ],
   "dependencies": {
-    "debug": "~4.3.1",
     "execa": "~5.0.0",
+    "got": "~11.8.1",
     "hh-mm-ss": "~1.2.0",
     "mkdirp": "~1.0.4",
-    "request": "~2.88.0",
-    "streamify": "~0.2.9",
+    "streamify": "~1.0.0",
     "universalify": "~2.0.0"
   },
   "devDependencies": {
